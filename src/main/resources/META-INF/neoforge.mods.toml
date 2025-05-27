@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "UNLICENSE"
+
+[[mods]]
+modId = "motdextender9000"
+version = "${version}"
+displayName = "MOTD Extender 9000"
+description = ""
+authors = "amyavi"
+
+[[mixins]]
+config = "motdextender9000.mixins.json"
+
+[[dependencies.motdextender9000]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${loader_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.motdextender9000]]
+modId = "adventure_platform_neoforge"
+type = "required"
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

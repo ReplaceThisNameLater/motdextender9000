@@ -1,0 +1,11 @@
+{
+  "compatibilityLevel": "JAVA_${java_version}",
+  "required": true,
+  "package": "com.github.amyavi.motdextender9000.mixin",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "server": [
+    "MinecraftServerMixin"
+  ]
+}
