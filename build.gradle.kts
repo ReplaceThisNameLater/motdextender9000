@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.loom)
 }
 
-version = "1.0.0"
+version = "1.0.1"
 group = "com.github.amyavi"
 
 repositories {
@@ -16,6 +16,13 @@ dependencies {
 
     neoForge(libs.neoforge)
     modImplementation(include("net.kyori:adventure-platform-neoforge:${libs.versions.adventure.get()}")!!)
+
+    include("net.kyori:option") {
+        version {
+            because("HACK: option 1.0.0 (bundled by adventure-platform-neoforge) breaks configurate 4.2.0")
+            strictly("1.1.0")
+        }
+    }
 }
 
 tasks.processResources {
